@@ -1,0 +1,6 @@
+framework module Pods_Rx_Helper {
+  umbrella header "Pods-Rx_Helper-umbrella.h"
+
+  export *
+  module * { export * }
+}
