@@ -27,8 +27,30 @@ class ViewController: UIViewController {
         
         viewModel = ViewModel.init()
         setupRx()
+        
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+//        let helloSequence = Observable.from(["H","e","l","l","o"])
+//        let subscription = helloSequence.subscribe { event in
+//            switch event {
+//            case .next(let value):
+//                print(value)
+//            case .error(let error):
+//                print(error)
+//            case .completed:
+//                print("completed")
+//            }
+//        }
+        
+    }
+    
+    public func executeProcedure(for description:String, procedure: () -> Void){
+        print("Procedure executed for:", description)
+    }
+    
+    
+    
     func setupRx() {
         _ = textFieldEmail.rx.text.map{ $0 ?? "" }.bind(to: viewModel.emailText)
         _ = textFieldPassword.rx.text.map{ $0 ?? "" }.bind(to: viewModel.passwordText)

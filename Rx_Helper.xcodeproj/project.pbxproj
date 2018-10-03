@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87449C3321652BC4001819A4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449C3221652BC4001819A4 /* LoginViewController.swift */; };
+		87449C3521652EB5001819A4 /* SigninModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449C3421652EB5001819A4 /* SigninModel.swift */; };
+		87449C3721652F6D001819A4 /* FieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449C3621652F6D001819A4 /* FieldViewModel.swift */; };
+		87449C39216530E3001819A4 /* EmailFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449C38216530E3001819A4 /* EmailFieldViewModel.swift */; };
+		87449C3B216535CF001819A4 /* PasswordFieldModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449C3A216535CF001819A4 /* PasswordFieldModel.swift */; };
+		87449C3D21653699001819A4 /* SigninViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449C3C21653699001819A4 /* SigninViewModel.swift */; };
+		87449C402165384D001819A4 /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87449C3F2165384D001819A4 /* APIProvider.swift */; };
 		877CCEE22164020400558918 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877CCEE12164020400558918 /* AppDelegate.swift */; };
 		877CCEE42164020400558918 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877CCEE32164020400558918 /* ViewController.swift */; };
 		877CCEE72164020400558918 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 877CCEE52164020400558918 /* Main.storyboard */; };
@@ -20,6 +27,13 @@
 		126DC7DFBCD884F59807BAF5 /* Pods_Rx_Helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rx_Helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7CEF92A0B0B0D608D81F7D /* Pods-Rx_Helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx_Helper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rx_Helper/Pods-Rx_Helper.debug.xcconfig"; sourceTree = "<group>"; };
 		40148B77796255A465F9E9D7 /* Pods-Rx_Helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rx_Helper.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rx_Helper/Pods-Rx_Helper.release.xcconfig"; sourceTree = "<group>"; };
+		87449C3221652BC4001819A4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		87449C3421652EB5001819A4 /* SigninModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninModel.swift; sourceTree = "<group>"; };
+		87449C3621652F6D001819A4 /* FieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldViewModel.swift; sourceTree = "<group>"; };
+		87449C38216530E3001819A4 /* EmailFieldViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailFieldViewModel.swift; sourceTree = "<group>"; };
+		87449C3A216535CF001819A4 /* PasswordFieldModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordFieldModel.swift; sourceTree = "<group>"; };
+		87449C3C21653699001819A4 /* SigninViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
+		87449C3F2165384D001819A4 /* APIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProvider.swift; sourceTree = "<group>"; };
 		877CCEDE2164020300558918 /* Rx_Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rx_Helper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		877CCEE12164020400558918 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		877CCEE32164020400558918 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +73,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		87449C3121652BAE001819A4 /* LoginViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				87449C3421652EB5001819A4 /* SigninModel.swift */,
+				87449C3621652F6D001819A4 /* FieldViewModel.swift */,
+				87449C38216530E3001819A4 /* EmailFieldViewModel.swift */,
+				87449C3A216535CF001819A4 /* PasswordFieldModel.swift */,
+				87449C3C21653699001819A4 /* SigninViewModel.swift */,
+			);
+			path = LoginViewModel;
+			sourceTree = "<group>";
+		};
+		87449C3E2165383D001819A4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				87449C3F2165384D001819A4 /* APIProvider.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		877CCED52164020300558918 = {
 			isa = PBXGroup;
 			children = (
@@ -80,9 +114,12 @@
 		877CCEE02164020300558918 /* Rx_Helper */ = {
 			isa = PBXGroup;
 			children = (
+				87449C3E2165383D001819A4 /* Networking */,
+				87449C3121652BAE001819A4 /* LoginViewModel */,
 				877CCEE12164020400558918 /* AppDelegate.swift */,
 				877CCEE32164020400558918 /* ViewController.swift */,
 				878A919E216402C00098C6BA /* ViewModel.swift */,
+				87449C3221652BC4001819A4 /* LoginViewController.swift */,
 				877CCEE52164020400558918 /* Main.storyboard */,
 				877CCEE82164020400558918 /* Assets.xcassets */,
 				877CCEEA2164020400558918 /* LaunchScreen.storyboard */,
@@ -227,9 +264,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87449C39216530E3001819A4 /* EmailFieldViewModel.swift in Sources */,
+				87449C3321652BC4001819A4 /* LoginViewController.swift in Sources */,
 				877CCEE42164020400558918 /* ViewController.swift in Sources */,
+				87449C3D21653699001819A4 /* SigninViewModel.swift in Sources */,
+				87449C3B216535CF001819A4 /* PasswordFieldModel.swift in Sources */,
 				878A919F216402C00098C6BA /* ViewModel.swift in Sources */,
+				87449C3521652EB5001819A4 /* SigninModel.swift in Sources */,
+				87449C402165384D001819A4 /* APIProvider.swift in Sources */,
 				877CCEE22164020400558918 /* AppDelegate.swift in Sources */,
+				87449C3721652F6D001819A4 /* FieldViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

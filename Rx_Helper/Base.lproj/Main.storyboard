@@ -35,6 +35,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZO-QT-8CC">
                                         <rect key="frame" x="0.0" y="83.5" width="335" height="36.5"/>
                                         <state key="normal" title="Login"/>
+                                        <connections>
+                                            <segue destination="dnj-Gd-6Ip" kind="show" id="I7r-eD-lSW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -74,6 +77,64 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1079.2" y="132.68365817091455"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="WOG-VU-ojh">
+            <objects>
+                <viewController id="dnj-Gd-6Ip" customClass="LoginViewController" customModule="Rx_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7yq-TY-cg6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mWF-7T-p72">
+                                <rect key="frame" x="20" y="94" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A9P-t2-zWq">
+                                <rect key="frame" x="20" y="144" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qkE-S8-Suv">
+                                <rect key="frame" x="164" y="204" width="46" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8s4-cp-c4E"/>
+                                    <constraint firstAttribute="width" constant="150" id="qS1-iu-oma"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="LlE-80-FYf">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mWF-7T-p72" firstAttribute="centerX" secondItem="MgL-PQ-Exz" secondAttribute="centerX" id="2YQ-N9-AQc"/>
+                            <constraint firstItem="A9P-t2-zWq" firstAttribute="leading" secondItem="mWF-7T-p72" secondAttribute="leading" id="EVh-el-G4x"/>
+                            <constraint firstItem="LlE-80-FYf" firstAttribute="centerX" secondItem="MgL-PQ-Exz" secondAttribute="centerX" id="P3H-1O-xOJ"/>
+                            <constraint firstItem="LlE-80-FYf" firstAttribute="centerY" secondItem="MgL-PQ-Exz" secondAttribute="centerY" id="UVU-is-TdJ"/>
+                            <constraint firstItem="mWF-7T-p72" firstAttribute="top" secondItem="MgL-PQ-Exz" secondAttribute="top" constant="30" id="bdh-pX-z5x"/>
+                            <constraint firstItem="MgL-PQ-Exz" firstAttribute="trailing" secondItem="mWF-7T-p72" secondAttribute="trailing" constant="20" id="cGN-3y-HOo"/>
+                            <constraint firstItem="A9P-t2-zWq" firstAttribute="trailing" secondItem="mWF-7T-p72" secondAttribute="trailing" id="eFg-eu-Z3U"/>
+                            <constraint firstItem="mWF-7T-p72" firstAttribute="leading" secondItem="MgL-PQ-Exz" secondAttribute="leading" constant="20" id="nRY-4W-6tk"/>
+                            <constraint firstItem="A9P-t2-zWq" firstAttribute="top" secondItem="mWF-7T-p72" secondAttribute="bottom" constant="20" id="sUy-Zu-6hD"/>
+                            <constraint firstItem="qkE-S8-Suv" firstAttribute="top" secondItem="A9P-t2-zWq" secondAttribute="bottom" constant="30" id="vjl-G9-tTH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MgL-PQ-Exz"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonLogin" destination="qkE-S8-Suv" id="59S-mH-b9C"/>
+                        <outlet property="loader" destination="LlE-80-FYf" id="K4E-wS-irQ"/>
+                        <outlet property="textFieldEmail" destination="mWF-7T-p72" id="TQG-ll-B9R"/>
+                        <outlet property="textFieldPassword" destination="A9P-t2-zWq" id="aKE-H3-vW4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ad-kQ-SwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1802.4000000000001" y="132.68365817091455"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6XG-Va-Fra">
